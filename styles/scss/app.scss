@@ -1,0 +1,14 @@
+// FILES
+@import "./shared/var";
+@import "./basic";
+@import "./shared/header";
+@import "./shared/footer";
+
+// components
+@import "./components/errorpage";
+
+body {
+  background-color: $color-bg-1;
+}
+
+@import "./shared/overwright";

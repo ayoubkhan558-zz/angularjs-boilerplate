@@ -1,0 +1,90 @@
+.input-group-text {
+  min-width: 75px;
+}
+
+.input-group-text.sm {
+  min-width: 55px;
+}
+
+/* // minw-5 */
+.minw-5 {
+  min-width: 150px;
+}
+
+/* // RGB color section */
+.rgb-section .input-group-text {
+  border-radius: 0;
+}
+
+.rgb-section .rgbRed {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
+}
+
+.rgb-section .rgbGreen {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 255, 0));
+}
+
+.rgb-section .rgbBlue {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 255));
+}
+
+
+/* // hsl COLOR  */
+.hslSection .input-group-text {
+  border-radius: 0;
+}
+
+.hslSection .hslHue {
+  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 0, 0), rgb(255, 0, 0));
+}
+
+.hslSection .hslSaturation {
+  background: linear-gradient(to right, rgb(128, 128, 128), rgb(255, 0, 0));
+}
+
+.hslSection .hslLightness {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0), rgb(255, 255, 255));
+}
+
+
+/*
+* FORMS
+*/
+.ng-empty
+
+/*
+ng-not-empty
+ng-untouched
+ng-touched
+ng-valid
+ng-invalid
+ng-dirty
+ng-pending
+ng-pristine
+*/
+input.form-control.mx {
+  background-color: white !important;
+  max-width: 75px !important;
+  width: 10% !important;
+  color: #fff !important;
+}
+
+input.ng-untouched {
+  background-color: rgba(76, 0, 255, 0.161) !important;
+}
+
+input.ng-pristine {
+  background-color: rgba(76, 0, 255, 0.161) !important;
+}
+
+input.ng-valid {
+  background-color: rgba(30, 255, 0, 0.161) !important;
+}
+
+input.ng-invalid {
+  background-color: rgba(255, 0, 0, 0.1607843137254902) !important;
+}
+
+input.ng-pending {
+  background-color: rgba(255, 238, 0, 0.161) !important;
+}

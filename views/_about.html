@@ -1,0 +1,90 @@
+<section>
+  <h1>About </h1>
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book.
+  </p>
+  <p>
+    It has survived not only five centuries, but also the leap
+    into electronic typesetting, remaining essentially unchanged.
+    It was popularised in the 1960s with the release of Letraset
+    sheets containing Lorem Ipsum passages, and more recently with
+    desktop publishing software like Aldus PageMaker including versions of
+    Lorem Ipsum.
+  </p>
+  <!-- // NG IF &&b NG-SHOW  -->
+  <div class="row">
+    <div class="col-6">
+      <div class="card border-success text-dark">
+        <h5 class="card-header d-flex justify-content-between">NG-Show (ng-if)
+          <button class="btn btn-sm btn-danger" ng-click="changeContentLoadedStatus()">
+            <span ng-show="contentLoaded">Loaded</span>
+            <span ng-show="!contentLoaded">
+              Loading
+              <div ng-show="!contentLoaded" class="spinner-grow spinner-grow-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </span>
+          </button>
+        </h5>
+        <div class="card-body text-center">
+          <div ng-show="!contentLoaded" class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div ng-show="contentLoaded" class="p-3">
+            <content-loaded></content-loaded>
+          </div>
+        </div>
+        </ul>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card border-danger text-danger" ng-click="changeContentLoadedStatus()">
+        <h5 class="card-header">NG-Show (ng-if)</h5>
+        <div class="card-body text-center">
+          <div ng-show="!contentLoaded" class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div ng-show="contentLoaded" class="p-3">
+            <div content-loaded></div>
+            <!-- <div class="content-loaded"></div> -->
+            <!-- directive: content-loaded -->
+          </div>
+        </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- // NG IF &&b NG-SHOW End -->
+  <!-- // BIDING  -->
+  <div class="row">
+    <div class="col-6">
+      <div class="card border-danger text-danger mt-4">
+        <h5 class="card-header">NG-Repeat (ng-for)</h5>
+        <div class="card-body text-center">
+          <h5 class="mb-0">Arrays</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" ng-repeat="name in names"> {{name}} </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card border-primary text-primary mt-4">
+        <h5 class="card-header">NG-Repeat (ng-for)</h5>
+        <div class="card-body text-center">
+          <h5 class="mb-0">Objects</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between" ng-repeat="person in persons">
+            <span>{{person.id}}: {{person.name}}</span>
+            <span>{{person.email}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- // BIDING End -->
+</section>

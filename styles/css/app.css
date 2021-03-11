@@ -1,0 +1,177 @@
+.input-group-text {
+  min-width: 75px;
+}
+
+.input-group-text.sm {
+  min-width: 55px;
+}
+
+/* // minw-5 */
+.minw-5 {
+  min-width: 150px;
+}
+
+/* // RGB color section */
+.rgb-section .input-group-text {
+  border-radius: 0;
+}
+
+.rgb-section .rgbRed {
+  background: linear-gradient(to right, black, red);
+}
+
+.rgb-section .rgbGreen {
+  background: linear-gradient(to right, black, lime);
+}
+
+.rgb-section .rgbBlue {
+  background: linear-gradient(to right, black, blue);
+}
+
+/* // hsl COLOR  */
+.hslSection .input-group-text {
+  border-radius: 0;
+}
+
+.hslSection .hslHue {
+  background: linear-gradient(to right, red, red, yellow, lime, aqua, blue, fuchsia, red, red);
+}
+
+.hslSection .hslSaturation {
+  background: linear-gradient(to right, gray, red);
+}
+
+.hslSection .hslLightness {
+  background: linear-gradient(to right, black, red, white);
+}
+
+/*
+* FORMS
+*/
+.ng-empty input.form-control.mx {
+  background-color: white !important;
+  max-width: 75px !important;
+  width: 10% !important;
+  color: #fff !important;
+}
+
+input.ng-untouched {
+  background-color: rgba(76, 0, 255, 0.161) !important;
+}
+
+input.ng-pristine {
+  background-color: rgba(76, 0, 255, 0.161) !important;
+}
+
+input.ng-valid {
+  background-color: rgba(30, 255, 0, 0.161) !important;
+}
+
+input.ng-invalid {
+  background-color: rgba(255, 0, 0, 0.1607843137) !important;
+}
+
+input.ng-pending {
+  background-color: rgba(255, 238, 0, 0.161) !important;
+}
+
+/*======================
+    404 page
+=======================*/
+.page_404 {
+  padding: 40px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+svg.error {
+  font-size: 10.5em;
+  width: 35vw;
+  height: 30vh;
+}
+
+.text {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 8% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 1%;
+  -webkit-animation: stroke-offset 5.5s infinite linear;
+          animation: stroke-offset 5.5s infinite linear;
+}
+
+.text:nth-child(1) {
+  stroke: #1c234d;
+  -webkit-animation-delay: -1;
+          animation-delay: -1;
+}
+
+.text:nth-child(2) {
+  stroke: #315b2c;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+
+.text:nth-child(3) {
+  stroke: #2f8f7f;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+.text:nth-child(4) {
+  stroke: #2f8f7f;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+
+.text:nth-child(5) {
+  stroke: #da2717;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+@-webkit-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+body {
+  background-color: #fff;
+}
+
+.animate-repeat {
+  line-height: 30px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition: all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity: 0;
+  max-height: 0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity: 1;
+  max-height: 30px;
+}
+
+.card .card-img-top {
+  height: 150px;
+  object-fit: cover;
+}

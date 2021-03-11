@@ -1,0 +1,51 @@
+<section>
+  <main class="container">
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+      <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
+
+      <div>
+        <div class="mb-2 mt-2">
+          I have <span class="badge bg-dark">{{friends.length}}</span> friends.
+        </div><!-- /.mb-2 -->
+        <div class="form-group mb-2">
+          <input class="form-control w-50" type="search" ng-model="q" placeholder="Search friends..."
+            aria-label="filter friends" />
+        </div>
+        <!-- // NG REPEAT -- NG FOR   -->
+        <div class="">
+          <div ng-repeat="friend in friends | orderBy: description| limitTo : 6 | filter:q as results track by friend.name"
+            class="d-flex text-muted pt-3 animate-repeat">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="75" height="75" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title ng-bind="::item.username"></title>
+              <rect width="100%" height="100%" fill="#007bff" ng-style="$odd && {'fill':'green'}" />
+              <text x="50%" y="50%" fill="#007bff" ng-style="$odd && {'fill':'green'}" dy=".3em">32x32</text>
+            </svg>
+
+            <p class="pb-3 mb-0 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">
+                @{{friend.name }} [{{$index + 1}}]
+              </strong>
+              <span class="badge bg-info">{{friend.name}}</span> who is <span class="badge bg-success">{{friend.age}}</span>
+              years old. <span class="badge bg-primary">{{friend.gender}}</span> <br>
+              {{ friend.info }}
+            </p>
+
+            <!-- <div>
+              IsFirst Element: {{$first}} --- IsMiddle Element: {{$middle}} <br>
+              IsLast Element: {{$last}}
+            </div> -->
+          </div>
+          <div class="animate-repeat" ng-if="results.length === 0">
+            <strong>No results found...</strong>
+          </div>
+          <div class="animate-repeat" ng-if="results.length === 0">
+            <strong>No results found...</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</section>

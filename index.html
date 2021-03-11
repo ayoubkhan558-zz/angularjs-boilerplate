@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./styles/css/bootstrap.css" />
+  <link rel="stylesheet" href="./styles/css/app.css" />
+
+</head>
+<body ng-app="appName" ng-controller="homeCtrl" ng-init="name='hafiz';
+email='hafiz@gmail.com';
+myCol='lightblue';
+myCol2='pink';
+themeClr='danger';
+themeClr2='dark';
+hslHue=215; hslSaturation=81; hslLightness=55">
+  <div ng-include="'views/shared/_navbar.html'"></div>
+
+  <main class="container my-3">
+    <ui-view></ui-view>
+  </main>
+
+  <!-- // MAIN FOOTER  -->
+  <div ng-include="'views/shared/_footer.html'"></div>
+
+
+  <!-- // JAVASCRIPT  -->
+  <script type="text/javascript" src="./scripts/angular.min.js"></script>
+  <script src="./scripts/angular-ui-router.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script> -->
+  <script src="./scripts/script.js"></script>
+
+
+</body>
+</html>
